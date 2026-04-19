@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los Girasoles Florería</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&display=swap" rel="stylesheet">
+
+
+
+<style>
+
+   body{
+    margin:0;
+    font-family: Georgia, serif;
+    background-image: url("fondo.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+   
+   
+
+.overlay{
+    
+    min-height:100vh;
+}
+
+header{
+    text-align:center;
+    padding:30px;
+}
+
+.logo{
+    width:150px;
+    border-radius:50%;
+    animation:girar 5s linear infinite;
+}
+
+@keyframes girar{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+h1{
+    margin:10px 0;
+    letter-spacing:3px;
+    font-family:'Pacifico',cursive;
+    font-size:3rem;
+    background:linear-gradient(90deg,#ce9f13,#c2a309,#d8a408);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+}
+
+.bienvenida{
+    font-size:22px;
+    font-weight:bold;
+    color:rgb(2, 2, 2);
+
+}
+
+.agradecimiento{
+color:#000000;
+font-size:20px;
+}
+
+.ofrecemos{
+color:#6b4310;
+font-size:20px;
+}
+
+.menu{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    padding:20px;
+}
+
+.menu button{
+    padding:12px 18px;
+    border:none;
+    border-radius:25px;
+    background:linear-gradient(45deg,#bb612d,#ffde7d,#fff1a8);
+    color:#7a0b0b;
+    cursor:pointer;
+    font-family:'Fredoka One',cursive;
+    font-size:1.1rem;
+}
+
+.menu button:hover{
+    transform:scale(1.1);
+}
+
+.direcciones{
+    text-align:center;
+    padding:20px;
+}
+
+.direcciones a{
+    display:block;
+    margin:10px;
+    background:#bb612d;
+    color:#7a0b0b;
+    border-radius:20px;
+    text-decoration:none;
+}
+.direcciones{
+color:#6b4310;
+font-size:20px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    
+}
+
+.redes a{
+    font-size:25px;
+    margin:10px;
+    color:#000000;
+   
+    
+}
+
+</style>
+</head>
+
+<body>
+
+    
+    <div class="overlay">
+
+
+
+<header>
+
+<p class="bienvenida">Bienvenido</p>
+
+<p class="agradecimiento">
+    Los Girasoles agradece tu preferencia</p>
+<p class="ofrecemos">
+    Le ofrecemos gran variedad de arreglos y decoraciones como:</p>
+</header>
+
+<div class="menu">
+
+<button onclick="abrirGaleria('Ramos para regalar',
+['ramocuatro.jpg.jpg','ramouno.jpg.jpeg','ramodos.jpg.jpeg','ramotres.jpg.jpeg','ramocinco.jpg.jpeg','ramoseis.jpg.jpeg'
+,'ramosiete.jpg.jpeg','ramoocho.jpg.jpeg','ramonueve.jpg.jpeg','ramodiez.jpg.jpeg'])">
+Ramos para regalar
+</button>
+
+<button onclick="abrirGaleria('Ramos para novias y quinceañera',[
+'noviauno.jpg.jpeg','noviatres.jpg.jpeg','noviasiete.jpg.jpeg','noviaseis.jpg.jpeg','noviaocho.jpg.jpeg',
+'noviados.jpg.jpeg','noviadiez.jpg.jpeg','noviacuatro.jpg.jpeg','noviacinco.jpg.jpeg'
+])">Ramos para novias y quinceañera</button>
+
+<button onclick="abrirGaleria('Portadas para iglesia',[
+'iglesiacuatro.jpg.jpeg',
+'iglesiacinco.jpg.jpeg','iglesiaseis.jpg.jpeg','iglesiasiete.jpg.jpeg','iglesiaocho.jpg.jpeg',
+'iglesianueve.jpg.jpeg','iglesiadiez.jpg.jpeg'
+])">Portadas para iglesia</button>
+
+<button onclick="abrirGaleria('Coronas fúnebres',[
+'coronauno.jpg.jpeg','coronados.jpg.jpeg','coronatres.jpg.jpeg','coronacuatro.jpg.jpeg','coronacinco.jpg.jpeg'
+,'coronaseis.jpg.jpeg','coronasiete.jpg.jpeg','coronaocho.jpg.jpeg','coronanueve.jpg.jpeg'
+])">Coronas fúnebres</button>
+
+<button onclick="abrirGaleria('Jardineras',[
+'jardinerauno.jpg.jpeg','jardinerados.jpg.jpeg','jardineratres.jpg.jpeg','jardineracuatro.jpg.jpeg','jardineracinco.jpg.jpeg',
+'jardineraseis.jpg.jpeg','jardinerasiete.jpg.jpeg','jardineranueve.jpg.jpeg',
+'jardineradiez.jpg.jpeg'
+])">Jardineras</button>
+
+<button onclick="abrirGaleria('Centros de mesa',[
+'mesauno.jpg.jpeg','mesados.jpg.jpeg','mesatres.jpg.jpeg','mesacuatro.jpg.jpeg','mesacinco.jpg.jpeg','mesaseis.jpg.jpeg'
+,'mesasiete.jpg.jpeg','mesaocho.jpg.jpeg','mesanueve.jpg.jpeg','mesadiez.jpg.jpeg'
+])">Centros de mesa</button>
+
+<button onclick="abrirGaleria('Arreglos para carros',[
+'carrouno.jpg.jpeg','carrotres.jpg.jpeg','carrosiete.jpg.jpeg','carroseis.jpg.jpeg','carroocho.jpg.jpeg',
+'carronueve.jpg.jpeg','carrodos.jpg.jpeg','carrodiez.jpg.jpeg','carrocuatro.jpg.jpeg','caroocinco.jpg.jpeg'
+])">Arreglos para carros</button>
+
+<button onclick="abrirGaleria('Mesa de dulce',[
+'dulcescinco.jpg.jpeg','dulcescuaro.jpg.jpeg','dulcesdiez.jpg.jpeg','dulcesdos.jpg.jpeg','dulcesnueve.jpg.jpeg'
+,'dulcesocho.jpg.jpeg','dulcesseis.jpg.jpeg','dulcessiete.jpg.jpeg','dulcestres.jpg.jpeg','dulcesuno.jpg.jpeg'
+
+])">Mesa de dulce</button>
+
+<button onclick="abrirGaleria('Portadas para imagenes',
+['imagen.jpg.jpeg','amagenesdos.jpg.jpeg','imagenestres.jpg.jpeg','imagenescuatro.jpg.jpeg','imagenescinco.jpg.jpeg'
+,'imagensiete.jpg.jpeg','imagenocho.jpg.jpeg','imagennueve.jpg.jpeg'])">
+Portadas para imagenes
+</button>
+
+<button onclick="abrirGaleria('Decoracion con telas',[
+'telasuno.jpg.jpeg','telasdos.jpg.jpeg','telass.jpg.jpeg','telascuatro.jpg.jpeg','telascinco.jpg.jpeg','telasseis.jpg.jpeg',
+'telassiete.jpg.jpeg','telasocho.jpg.jpeg','telasnueve.jpg.jpeg','telasdiez.jpg.jpeg'
+])">Decoracion con telas </button>
+
+<button onclick="abrirGaleria('Decocacion con globos',[
+'globosuno.jpg.jpeg','globosdos.jpg.jpeg','globostres.jpg.jpg','globoscuatro.jpg.jpeg','globoscinco.jpg.jpeg',
+'globosseis.jpg.jpeg','globossiete.jpg.jpeg'
+])">Decoracion con globos</button>
+
+<button onclick="abrirGaleria('Arreglos con accesorios',[
+'regalosuno.jpg.jpeg','regalodos.jpg.jpeg','regalotres.jpg.jpeg','regalocuatro.jpg.jpeg','regalocinco.jpg.jpeg',
+'regaloseis.jpg.jpeg','accesorio.jpg'
+])">Arreglos con accesorios</button>
+
+<button onclick="abrirGaleria('Arreglos para carro alegorico',[
+'alegoricouno.jpg.jpeg','alegoricodos.jpg.jpeg','alegoricotres.jpg.jpeg','alegoricocuatro.jpg.jpeg','alegoricocinco.jpg.jpeg',
+'alegoricoseis.jpg.jpeg','alegoricosiete.jpg.jpeg','alegoricoocho.jpg.jpeg'
+])">Arreglos para carro alegorico</button>
+
+<button onclick="abrirGaleria('Arreglos para iglesia',[
+'pasillouno.jpg.jpeg','pasillodos.jpg.jpeg','pasillitres.jpg.jpeg','pasillocuatro.jpg.jpeg','pasillicinco.jpg.jpeg',
+'pasilloseis.jpg.jpeg','chiwis.jpg.jpeg','pasillosiete.jpg.jpeg'
+])">Arreglos para iglesia</button>
+
+</div>
+
+<div class="direcciones">
+<p class="direcciones">
+    contamos con dos direcciones </p>
+<a href="https://maps.app.goo.gl/hBo3D6Kx8cJzoLKw8" target="_blank">Ver dirección 1</a>
+<a href="https://maps.app.goo.gl/CvyhYdbcC2zUaAjC8" target="_blank">Ver dirección 2</a>
+</div>
+
+<footer>
+   
+   
+    <div class="redes">
+        
+    <a href="https://instagram.com/rigo.delacruz.39948"><i class="fab fa-instagram"></i></a>
+<a href="https://facebook.com/Los Girasoles Florería"> <i class="fab fa-facebook"></i></a>
+<a href="https://tiktok.com/@los.girasoles.flo22"><i class="fab fa-tiktok"></i></a>
+<a href="https://wa.me/527293728955"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/527291543707"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</footer>
+
+</div>
+
+<script>
+function abrirGaleria(titulo, imagenes){
+
+let nuevaVentana = window.open("", "_blank");
+
+let html = `
+<html>
+<head>
+<title>${titulo}</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align:center;
+background:#fffbe7;
+padding:20px;
+}
+
+h1{
+color:#c49a00;
+}
+
+img{
+width:300px;
+margin:15px;
+border-radius:15px;
+box-shadow:0 0 10px gray;
+}
+
+button{
+padding:10px 20px;
+font-size:18px;
+background:#f4c542;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>${titulo}</h1>
+`;
+
+imagenes.forEach(img => {
+html += '<img src="' + img + '">';
+});
+
+html += `
+<br><br>
+<button onclick="window.close()">⬅ Regresar</button>
+</body>
+</html>
+`;
+
+nuevaVentana.document.write(html);
+nuevaVentana.document.close();
+}
+
+</script>
+
+</script>
+
+</body>
+</html>
